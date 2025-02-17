@@ -1,122 +1,102 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Seth Kline Portfolio</title>
-	<meta content="Development portfolio of Seth Kline " name="description" property="og:description">
-  
-  <link rel="shortcut icon" type="image/x-icon" href="favicon-code.ico">
-	<link href="style.css" rel="stylesheet">
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> <!-- Load JQuery, as our little script depends on it -->
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600,400" rel="stylesheet" type="text/css"> <!-- Load our font from Google -->
-
-
-	<!-- This is a neat little effect that fades the website in from white when it is loaded. This will work in unison with a animation effect. -->
-  <script>
-    $(window).load(function () {
-      $('.preloader').delay(400).fadeOut('slow');
-    })
-	</script>
-	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Seth Kline – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Optionally link external fonts or frameworks -->
+  <!-- Example: <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600,400" rel="stylesheet" /> -->
 </head>
-
-
-
-
 <body>
-	<!-- This calls the little script written above. -->
-  <div class="preloader"></div>
 
-	<!-- The Intro section begins -->
-  <section class="intro">
-
-		<div class="intro-text"> <!-- Seperates the text section from the arrow. -->
-      <div class="Hi">
-				<h1>Hi! 👋  &mdash; My name is <span>Seth</span>, I'm a <span>developer</span> 👨🏻‍💻 located in Mechanicsburg, PA.</h1>
+  <!-- Header / Intro Section -->
+  <header class="header">
+    <div class="container">
+      <h1>Hello, I'm <span class="highlight">Seth Kline</span>.</h1>
+      <p>I'm a front-end developer specializing in Vue.js, React, and building mobile-friendly websites and apps.<br>
+         I love turning complex problems into intuitive user experiences.</p>
+      <div class="social-links">
+        <a href="mailto:seth.mkline@gmail.com" class="btn">Email Me</a>
+        <a href="https://github.com/sethkline" class="btn" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/seth-kline-90484910/" class="btn" target="_blank">LinkedIn</a>
       </div>
     </div>
-    
-	</section>
-	<!-- Intro section ends -->
-	
-	<!-- The portfolio section begins -->
+  </header>
 
+  <!-- Projects Section -->
   <section class="projects">
-    <div class="projects-collage">
+    <div class="container">
+      <h2>Selected Projects</h2>
+      
+      <!-- Project #1: Reverence Studios Website -->
+      <article class="project">
+        <img src="imgs/reverence-website.jpg" alt="Screenshot of Reverence Studios website" class="project-image" />
+        <div class="project-info">
+          <h3>Reverence Studios Website</h3>
+          <p><strong>Tech Stack:</strong> Nuxt 3 (Vue), Tailwind, Storyblok (Headless CMS).</p>
+          <p><strong>Problem:</strong> The old site was built on WordPress, then migrated to Gatsby, but it had no database and was difficult to update (needed PRs). The studio team wanted a simpler, more maintainable way to add or edit content.</p>
+          <p><strong>Solution:</strong> I rebuilt the site using <em>Nuxt</em> (Vue framework) integrated with the <em>Storyblok</em> headless CMS. I created reusable Vue components styled with Tailwind and Headless UI, allowing content editors to manage classes, schedules, and announcements via a user-friendly CMS interface—no more code pushes required.</p>
+          <p><strong>Result:</strong> The new site is much easier to maintain. Non-technical staff can update classes and announcements in real-time. The new UI is fully mobile-friendly, using a color palette aligned with the studio’s brand.</p>
+          <a href="https://reverencestudios.com" class="btn" target="_blank">Live Website</a>
+        </div>
+      </article>
 
-			<!-- Project One -->
-      <a class="project-item" href="https://sethportfolio-next-prod.herokuapp.com" target="_blank">
-        <figure class="project-figure">
-          <div class="project-overlay"></div>
-          <img src="./imgs/pcnStore.png">
-          <figcaption class="project-text">
-            <h2>PCN Store</h2>
-            <p>FullStack App Featuring GraphQL Prisma Backend with Next JS React Front End</p>
-          </figcaption>
-        </figure>
-			</a>
-			<!-- Project One Ends -->
-			
-			<!-- Project Two -->
-      <a class="project-item" href="https://angry-golick-526da1.netlify.com" target="_blank">
-        <figure class="project-figure">
-          <div class="project-overlay"></div>
-          <img src="./imgs/newsGrid.png">
-          <figcaption class="project-text">
-            <h2>NewsGrid</h2>
-            <p>Responsive Website built using CCS Grid and Flexbox</p>
-          </figcaption>
-        </figure>
-			</a>
-			<!-- Project Two Ends -->
-			
-			<!-- Project Three -->
-      <a class="project-item" href="https://www.reverencestudios.com/four-seasons" target="_blank">
-        <figure class="project-figure">
-          <div class="project-overlay"></div>
-          <img src="./imgs/fourSeasons.png">
-          <figcaption class="project-text">
-            <h2>Reverence Studios Recital Page</h2>
-            <p>Recital Preview page built with React</p>
-          </figcaption>
-        </figure>
-			</a>
-			<!-- Project Three Ends -->
-			
-    </div>
-	</section>
-	<!-- Portfolio section ends -->
-	
-	
-	<!-- Contact button section begins -->
-  <section class="content contact">
-    <a class="button-slide" data-hover="seth.mkline@gmail.com" href="mailto:seth.mkline@gmail.com">
-      <span>Talk To Me 👌</span>
-    </a>
-	</section>
-	<!-- Contact button section ends-->
-	
-	<!-- Footer section begins - If you do not want links here, you can change the <li> items to just be <p> tags or whatever you require -->
-  <footer>
-    <div class="wrapper">
-      <ul>
+      <!-- Project #2: Reverence Ticket Sales System -->
+      <article class="project">
+        <img src="imgs/ticket-sales.jpg" alt="Screenshot of ticket sales system" class="project-image" />
+        <div class="project-info">
+          <h3>Online Ticket Sales for Reverence Studios</h3>
+          <p><strong>Tech Stack:</strong> Nuxt 3 (Vue), PrimeVue, Strapi (Node.js), Stripe.</p>
+          <p><strong>Problem:</strong> The old ticket system was a custom PHP app that was difficult to maintain and lacked modern features like seat selection and easy payment processing. </p>
+          <p><strong>Solution:</strong> I developed a new online ticket platform where users can choose seats for multiple shows and securely pay via <em>Stripe</em>. The front end uses <em>Nuxt 3</em> and <em>PrimeVue</em> for a dynamic yet consistent UI, while the back end runs on <em>Strapi</em> for content/data management.</p>
+          <p><strong>Result:</strong> The studio can now easily manage event details and track ticket sales from a central admin panel. Customers get a smoother, modern e-commerce-like experience with seat maps and reliable checkout flow.</p>
+          <!-- If live, link it. Otherwise just show screenshots. -->
+        </div>
+      </article>
 
-        <li>
-          <a href="https://www.linkedin.com/in/seth-kline-90484910/" target="_blank">Linkedin</a>
-				</li>
-				<li>
-						<a href="https://github.com/sethkline" target="_blank">GitHub</a>
-					</li>
-      </ul>
+      <!-- Additional / Older Projects -->
+      <h2>Other Notable Projects</h2>
+      <div class="other-projects">
+        
+        <!-- Example older project #1 (PCN Store) -->
+        <div class="other-project-item">
+          <img src="imgs/pcnStore.png" alt="PCN Store screenshot" />
+          <div>
+            <h4>PCN Store (FullStack App)</h4>
+            <p>Built with Next.js (React) and a GraphQL Prisma backend. Showcased dynamic product listings and integrated user authentication. Optimized for mobile with responsive design.</p>
+          </div>
+        </div>
+
+        <!-- Example older project #2 (NewsGrid) -->
+        <div class="other-project-item">
+          <img src="imgs/newsGrid.png" alt="NewsGrid screenshot" />
+          <div>
+            <h4>NewsGrid (Responsive Website)</h4>
+            <p>Used CSS Grid and Flexbox for a fully responsive layout. Demonstrates modern front-end architecture and best practices for mobile-first design.</p>
+          </div>
+        </div>
+
+        <!-- Example older project #3 (Reverence Studios Recital Page) -->
+        <div class="other-project-item">
+          <img src="imgs/fourSeasons.png" alt="Reverence Studios Recital Page screenshot" />
+          <div>
+            <h4>Reverence Studios Recital Page</h4>
+            <p>Built with React. Provided a quick-lift solution to display upcoming recitals and scheduling details.</p>
+          </div>
+        </div>
+
+      </div><!-- other projects container end -->
+
     </div>
-	</footer>
-	<!-- Footer section ends -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Seth Kline. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
-
-
 </html>
