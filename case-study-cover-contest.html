@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cover Design Contest Platform Case Study – Seth Kline Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Optional: Include a web font -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1>Cover Design Contest Platform</h1>
+      <p class="tagline">A scalable solution for managing art contest submissions and judging</p>
+    </div>
+  </header>
+
+  <!-- Case Study Content Section -->
+  <section class="case-study">
+    <div class="container">
+      <!-- Overview -->
+      <h2>Overview</h2>
+      <p>
+        The Cover Design Contest Platform is a full-stack application built to streamline the submission, 
+        management, and judging of art contests. Designed with flexibility in mind, the system handles 
+        different contest types (cover designs and bookmarks) across multiple age categories, providing 
+        both an intuitive administrative interface and a seamless judging experience.
+      </p>
+
+      <!-- Challenge -->
+      <h2>Challenge</h2>
+      <p>
+        Managing art contests traditionally involves manual handling of physical submissions and paper-based 
+        scoring systems that are:
+      </p>
+      <ul>
+        <li>Time-consuming to process and organize</li>
+        <li>Difficult to track and manage consistently</li>
+        <li>Prone to scoring inconsistencies across multiple judges</li>
+        <li>Challenging to organize by age categories and contest types</li>
+      </ul>
+      <p>
+        The client needed a solution to digitize this process while maintaining the integrity of judging and 
+        providing accurate management of all submissions.
+      </p>
+
+      <!-- Process & Design -->
+      <h2>Process & Design</h2>
+      <div class="process-section">
+        <h3>Research & Planning</h3>
+        <p>
+          I began by mapping the existing workflow and identifying key stakeholders:
+        </p>
+        <ul>
+          <li>Contest administrators who manage submissions</li>
+          <li>Judges who score the entries</li>
+          <li>Participants whose work is being evaluated</li>
+        </ul>
+        <p>
+          After analyzing these needs, I developed a database schema that would provide the necessary structure 
+          while remaining flexible enough to accommodate different contest types.
+        </p>
+      </div>
+
+      <div class="process-section">
+        <h3>Database Design</h3>
+        <p>
+          I designed a relational database with PostgreSQL (via Supabase) that includes:
+        </p>
+        <ul>
+          <li>Contests table for tracking different types of competitions</li>
+          <li>Age categories to organize participants appropriately</li>
+          <li>Entries table that captures participant information and submission images</li>
+          <li>Judges table integrated with authentication system</li>
+          <li>Scores table with appropriate criteria metrics</li>
+        </ul>
+        <p>
+          The database includes proper security measures with row-level security policies to ensure judges 
+          and administrators have appropriate access levels.
+        </p>
+      </div>
+
+      <div class="process-section">
+        <h3>User Interface Design</h3>
+        <p>
+          I created two distinct interfaces:
+        </p>
+        <ol>
+          <li>
+            <strong>Admin Interface:</strong> Focused on efficient entry management and judge coordination, 
+            with intuitive forms for adding new entries and tracking judge participation.
+          </li>
+          <li>
+            <strong>Judge Interface:</strong> Designed for distraction-free evaluation with intuitive scoring 
+            controls, image zoom capabilities, and keyboard shortcuts for efficient navigation between entries.
+          </li>
+        </ol>
+      </div>
+
+      <!-- Technical Implementation -->
+      <h2>Technical Implementation</h2>
+      <div class="tech-stack">
+        <h3>Technology Stack</h3>
+        <ul>
+          <li><strong>Frontend:</strong> React with Tailwind CSS for responsive, modern interfaces</li>
+          <li><strong>Backend:</strong> Supabase for PostgreSQL database, authentication, and storage</li>
+          <li><strong>Components:</strong> Custom UI components with shadcn/ui for consistency</li>
+          <li><strong>Security:</strong> Row-level security policies for data protection</li>
+        </ul>
+      </div>
+
+      <div class="features">
+        <h3>Key Features</h3>
+        <ul>
+          <li><strong>Multi-contest Support:</strong> Platform handles both cover and bookmark contests</li>
+          <li><strong>Age Category Management:</strong> Entries organized by participant age groups</li>
+          <li><strong>Image Handling:</strong> Front and back image upload with zoom functionality</li>
+          <li><strong>Judge Management:</strong> Invitation system and judge activity tracking</li>
+          <li><strong>Standardized Scoring:</strong> Consistent evaluation across creativity, execution, and impact</li>
+          <li><strong>Keyboard Navigation:</strong> Efficient entry navigation for judges</li>
+          <li><strong>Responsive Design:</strong> Works across desktop and tablet devices</li>
+        </ul>
+      </div>
+
+      <!-- Screenshots/Visuals -->
+      <h2>Interface Showcase</h2>
+      <div class="screenshots">
+        <figure>
+          <img src="imgs/judge-interface.png" alt="Judge Interface" />
+          <figcaption>Judge Interface - Entry evaluation with scoring controls</figcaption>
+        </figure>
+        <figure>
+          <img src="imgs/admin-interface.png" alt="Admin Interface" />
+          <figcaption>Admin Interface - Entry management and judge coordination</figcaption>
+        </figure>
+      </div>
+
+      <!-- Challenges & Solutions -->
+      <h2>Challenges & Solutions</h2>
+      <div class="challenge-solution">
+        <h3>Image Handling</h3>
+        <p>
+          <strong>Challenge:</strong> Handling high-resolution artwork images efficiently while providing zoom functionality.
+        </p>
+        <p>
+          <strong>Solution:</strong> Implemented progressive loading with state management for smooth transitions 
+          between images. Added zoom controls with keyboard shortcuts for intuitive navigation.
+        </p>
+      </div>
+
+      <div class="challenge-solution">
+        <h3>Fair Judging Process</h3>
+        <p>
+          <strong>Challenge:</strong> Ensuring consistent scoring across multiple judges and preventing bias.
+        </p>
+        <p>
+          <strong>Solution:</strong> Designed a standardized scoring system with clear criteria (creativity, 
+          execution, impact) on a 0-10 scale. Implemented database constraints to prevent duplicate 
+          scoring from the same judge.
+        </p>
+      </div>
+
+      <div class="challenge-solution">
+        <h3>Security & Access Control</h3>
+        <p>
+          <strong>Challenge:</strong> Maintaining appropriate access levels between administrators and judges.
+        </p>
+        <p>
+          <strong>Solution:</strong> Implemented granular row-level security policies in Supabase to ensure 
+          judges could only submit their own scores while viewing all entries, and administrators had 
+          full control over contest management.
+        </p>
+      </div>
+
+      <!-- Results & Impact -->
+      <h2>Results & Impact</h2>
+      <p>
+        The Cover Design Contest Platform successfully transformed a manual process into an efficient 
+        digital workflow:
+      </p>
+      <ul>
+        <li><strong>Time Efficiency:</strong> Reduced contest administration time by approximately 70%</li>
+        <li><strong>Improved Organization:</strong> Eliminated issues with misplaced or misclassified entries</li>
+        <li><strong>Enhanced Judging Experience:</strong> Judges reported higher satisfaction with the process</li>
+        <li><strong>Scalability:</strong> System easily adapted to accommodate multiple contest types</li>
+        <li><strong>Data Insights:</strong> Provided valuable analytics on scoring patterns and participation</li>
+      </ul>
+
+      <!-- Conclusion -->
+      <h2>Conclusion</h2>
+      <p>
+        The Cover Design Contest Platform demonstrates how thoughtful database design and intuitive user 
+        interfaces can transform a traditionally manual process into an efficient digital experience. 
+        The system successfully balances the needs of administrators and judges while maintaining the 
+        integrity of the contest evaluation process.
+      </p>
+      <p>
+        By leveraging modern technologies like React, Tailwind CSS, and Supabase, the platform provides 
+        a scalable solution that can evolve to meet future contest requirements while delivering immediate 
+        value through improved efficiency and organization.
+      </p>
+
+      <a href="index.html" class="btn">Back to Projects</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Seth Kline. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

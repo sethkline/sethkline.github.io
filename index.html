@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seth Kline – Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Optionally link external fonts or frameworks -->
-  <!-- Example: <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,600,400" rel="stylesheet" /> -->
+  <!-- Optional: Include a web font -->
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
 </head>
 <body>
-
   <!-- Header / Intro Section -->
   <header class="header">
     <div class="container">
       <h1>Hello, I'm <span class="highlight">Seth Kline</span>.</h1>
-      <p>I'm a front-end developer specializing in Vue.js, React, and building mobile-friendly websites and apps.<br>
-         I love turning complex problems into intuitive user experiences.</p>
+      <p class="tagline">Innovative. Collaborative. Results-Driven. User-Centric.</p>
+      <p class="intro">
+        I'm a full-stack developer & UX designer with 6+ years of experience building responsive, user-centric web applications that seamlessly blend technical prowess with thoughtful design.
+      </p>
       <div class="social-links">
         <a href="mailto:seth.mkline@gmail.com" class="btn">Email Me</a>
         <a href="https://github.com/sethkline" class="btn" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/seth-kline-90484910/" class="btn" target="_blank">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/seth-kline" class="btn" target="_blank">LinkedIn</a>
       </div>
     </div>
   </header>
@@ -29,65 +30,49 @@
     <div class="container">
       <h2>Selected Projects</h2>
       
-      <!-- Project #1: Reverence Studios Website -->
       <article class="project">
-        <img src="imgs/reverence-website.jpg" alt="Screenshot of Reverence Studios website" class="project-image" />
+        <img src="imgs/cover-contest-admin-dashboard.png" alt="Cover Design Contest Application" class="project-image" />
+        <div class="project-info">
+          <h3>Cover Design Contest Platform</h3>
+          <p><strong>Tech Stack:</strong> React, Supabase (PostgreSQL), Tailwind CSS</p>
+          <p><strong>Overview:</strong> A comprehensive platform for managing art contest submissions, judging workflows, and results tracking across multiple age categories. <span class="tag">Completed</span></p>
+          <a href="case-study-cover-contest.html" class="btn" target="_blank">View Case Study</a>
+        </div>
+      </article>
+
+      <!-- <article class="project">
+        <img src="imgs/barber-school-dashboard.png" alt="Barber School Management Application" class="project-image" />
+        <div class="project-info">
+          <h3>Barber School Management Application</h3>
+          <p><strong>Overview:</strong> A comprehensive system for managing leads and tracking student progress at a local barber school. <span class="tag">In Progress</span></p>
+          <a href="case-study-barber-school.html" class="btn" target="_blank">View Case Study</a>
+        </div>
+      </article> -->
+
+      <article class="project">
+        <img src="imgs/reverence-website.jpg" alt="Reverence Studios Website" class="project-image" />
         <div class="project-info">
           <h3>Reverence Studios Website</h3>
-          <p><strong>Tech Stack:</strong> Nuxt 3 (Vue), Tailwind, Storyblok (Headless CMS).</p>
-          <p><strong>Problem:</strong> The old site was built on WordPress, then migrated to Gatsby, but it had no database and was difficult to update (needed PRs). The studio team wanted a simpler, more maintainable way to add or edit content.</p>
-          <p><strong>Solution:</strong> I rebuilt the site using <em>Nuxt</em> (Vue framework) integrated with the <em>Storyblok</em> headless CMS. I created reusable Vue components styled with Tailwind and Headless UI, allowing content editors to manage classes, schedules, and announcements via a user-friendly CMS interface—no more code pushes required.</p>
-          <p><strong>Result:</strong> The new site is much easier to maintain. Non-technical staff can update classes and announcements in real-time. The new UI is fully mobile-friendly, using a color palette aligned with the studio’s brand.</p>
+          <p><strong>Tech Stack:</strong> Nuxt 3, Tailwind, Storyblok</p>
+          <p><strong>Overview:</strong> Redesigned a legacy site into a modern, maintainable platform.</p>
           <a href="https://reverencestudios.com" class="btn" target="_blank">Live Website</a>
         </div>
       </article>
+      
+      <!-- Add additional project cards here as needed -->
+    </div>
+  </section>
 
-      <!-- Project #2: Reverence Ticket Sales System -->
-      <article class="project">
-        <img src="imgs/ticket-sales.jpg" alt="Screenshot of ticket sales system" class="project-image" />
-        <div class="project-info">
-          <h3>Online Ticket Sales for Reverence Studios</h3>
-          <p><strong>Tech Stack:</strong> Nuxt 3 (Vue), PrimeVue, Strapi (Node.js), Stripe.</p>
-          <p><strong>Problem:</strong> The old ticket system was a custom PHP app that was difficult to maintain and lacked modern features like seat selection and easy payment processing. </p>
-          <p><strong>Solution:</strong> I developed a new online ticket platform where users can choose seats for multiple shows and securely pay via <em>Stripe</em>. The front end uses <em>Nuxt 3</em> and <em>PrimeVue</em> for a dynamic yet consistent UI, while the back end runs on <em>Strapi</em> for content/data management.</p>
-          <p><strong>Result:</strong> The studio can now easily manage event details and track ticket sales from a central admin panel. Customers get a smoother, modern e-commerce-like experience with seat maps and reliable checkout flow.</p>
-          <!-- If live, link it. Otherwise just show screenshots. -->
-        </div>
-      </article>
-
-      <!-- Additional / Older Projects -->
-      <h2>Other Notable Projects</h2>
-      <div class="other-projects">
-        
-        <!-- Example older project #1 (PCN Store) -->
-        <div class="other-project-item">
-          <img src="imgs/pcnStore.png" alt="PCN Store screenshot" />
-          <div>
-            <h4>PCN Store (FullStack App)</h4>
-            <p>Built with Next.js (React) and a GraphQL Prisma backend. Showcased dynamic product listings and integrated user authentication. Optimized for mobile with responsive design.</p>
-          </div>
-        </div>
-
-        <!-- Example older project #2 (NewsGrid) -->
-        <div class="other-project-item">
-          <img src="imgs/newsGrid.png" alt="NewsGrid screenshot" />
-          <div>
-            <h4>NewsGrid (Responsive Website)</h4>
-            <p>Used CSS Grid and Flexbox for a fully responsive layout. Demonstrates modern front-end architecture and best practices for mobile-first design.</p>
-          </div>
-        </div>
-
-        <!-- Example older project #3 (Reverence Studios Recital Page) -->
-        <div class="other-project-item">
-          <img src="imgs/fourSeasons.png" alt="Reverence Studios Recital Page screenshot" />
-          <div>
-            <h4>Reverence Studios Recital Page</h4>
-            <p>Built with React. Provided a quick-lift solution to display upcoming recitals and scheduling details.</p>
-          </div>
-        </div>
-
-      </div><!-- other projects container end -->
-
+  <!-- About & Resume Section -->
+  <section class="resume">
+    <div class="container">
+      <h2>About Me & Resume</h2>
+      <p>
+        I'm a full-stack developer with over 6 years of experience building responsive, user-centric web applications. I thrive on innovation, collaboration, and delivering results through intuitive design and robust development.
+      </p>
+      <p><strong>Strengths:</strong> Innovative, Collaborative, Results-Driven, User-Centric</p>
+      <!-- Provide a download link or summary; sensitive details like phone or address are omitted -->
+      <a href="resume.pdf" class="btn" target="_blank">Download Resume</a>
     </div>
   </section>
 
@@ -97,6 +82,5 @@
       <p>&copy; 2025 Seth Kline. All rights reserved.</p>
     </div>
   </footer>
-
 </body>
 </html>
