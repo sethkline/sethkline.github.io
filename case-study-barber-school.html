@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barber School Management Application Case Study – Seth Kline Portfolio</title>
+  <title>Barber School Management System – Seth Kline Portfolio</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Optional: Include a web font -->
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600" rel="stylesheet">
 </head>
 <body>
   <!-- Header Section -->
   <header class="header">
     <div class="container">
-      <h1>Barber School Management Application</h1>
-      <p class="tagline">A comprehensive management system for a local barber school</p>
+      <h1>Barber School Management System</h1>
+      <p class="tagline">A comprehensive full-stack solution for barber school operations</p>
     </div>
   </header>
 
@@ -21,59 +20,182 @@
   <section class="case-study">
     <div class="container">
       <!-- Overview -->
-      <h2>Overview</h2>
+      <h2>Project Overview</h2>
       <p>
-        The Barber School Management Application is designed to streamline operations for a local barber school.
-        It helps manage leads, track student progress, and centralize administrative tasks.
-        This project leverages modern technologies like Nuxt 3, a Postgres backend via Supabase, and a component-driven approach documented through Storybook.
+        The Barber School Management System is a full-featured web application that digitizes and streamlines all aspects of barber school operations. This system replaces multiple disconnected tools with a single, cohesive platform that manages the entire student lifecycle, from initial lead to graduation and beyond. 
+      </p>
+      <p>
+        As the solo developer on this project, I was responsible for the entire process - from requirements gathering and system design to front-end implementation, back-end architecture, and deployment.
       </p>
 
-      <!-- Process & Design -->
-      <h2>Process & Design</h2>
-      <p>
-        The design process began with extensive research, user flows, and wireframes created in Miro.
-        Mapping out the user journey helped identify key interactions for both students and administrators.
-      </p>
-      <ul>
-        <!-- <li><a href="https://miro.com/app/board/yourMiroBoardID" target="_blank" class="btn">View Miro Board</a></li>
-        <li><a href="https://www.loom.com/share/yourLoomVideoID" target="_blank" class="btn">Watch Design Walkthrough</a></li> -->
-      </ul>
+      <!-- Tech Stack -->
+      <h2>Tech Stack</h2>
+      <div class="tech-stack">
+        <div class="tech-category">
+          <h3>Frontend</h3>
+          <ul>
+            <li>Vue 3 with Composition API</li>
+            <li>Nuxt 3 for server-side rendering</li>
+            <li>PrimeVue for UI components</li>
+            <li>TailwindCSS for custom styling</li>
+            <li>Chart.js for data visualization</li>
+          </ul>
+        </div>
+        <div class="tech-category">
+          <h3>Backend</h3>
+          <ul>
+            <li>Supabase (PostgreSQL)</li>
+            <li>RESTful API architecture</li>
+            <li>Supabase for authentication</li>
+            <li>Nuxt Server Routes for API endpoints</li>
+          </ul>
+        </div>
+        <div class="tech-category">
+          <h3>Development Tools</h3>
+          <ul>
+            <li>TypeScript for type safety</li>
+            <li>Storybook for component documentation</li>
+            <li>Git for version control</li>
+            <li>Vercel for deployment</li>
+          </ul>
+        </div>
+      </div>
 
-      <!-- Development & Features -->
-      <h2>Development & Features</h2>
-      <p>
-        The application is built with a focus on performance and user experience:
-      </p>
-      <ul>
-        <li><strong>Responsive Design:</strong> Optimized for both mobile and desktop.</li>
-        <li><strong>Lead Management:</strong> Efficient tracking and management of prospective students.</li>
-        <li><strong>Student Progress Tracking:</strong> Intuitive dashboards for monitoring progress.</li>
-        <li><strong>Admin Panel:</strong> Simplified interfaces for administrative tasks.</li>
-        <li><strong>Supabase Integration:</strong> Robust backend services using Postgres.</li>
-      </ul>
-
-      <!-- Challenges & Solutions -->
-      <h2>Challenges & Solutions</h2>
-      <p>
-        Balancing feature richness with an intuitive interface was a primary challenge.
-        Iterative testing and user feedback helped refine the design, ensuring ease of use while maintaining comprehensive functionality.
-      </p>
-
-      <!-- Further Information -->
-      <!-- <h2>Further Information</h2>
-      <p>
-        For a detailed look at the code and technical details, check out the GitHub repository:
-      </p>
-      <a href="https://github.com/yourusername/barber-school-management" class="btn" target="_blank">View GitHub Repository</a> -->
-
-      <!-- Conclusion -->
-      <h2>Conclusion</h2>
-      <p>
-        This ongoing project demonstrates how thoughtful design and robust development can create a scalable solution for managing educational operations.
-        Future enhancements will continue to improve its functionality and user experience.
-      </p>
+      <!-- Key Features with Screenshots -->
+      <h2>Key Features</h2>
       
-      <a href="index.html" class="btn">Back to Projects</a>
+      <div class="feature">
+        <h3>Interactive Dashboard</h3>
+        <p>
+          Designed an information-rich dashboard with real-time metrics, upcoming tasks, and student status distribution. The dashboard provides immediate insights into school operations, attendance trends, and student progress through interactive charts and data visualizations.
+        </p>
+        <img src="imgs/barber-dashboard.png" alt="Barber School Dashboard">
+      </div>
+
+      <div class="feature">
+        <h3>Complete Student Management</h3>
+        <p>
+          Implemented a comprehensive student tracking system that follows the entire student journey, from enrollment to graduation. Features include:
+        </p>
+        <ul>
+          <li>Student profiles with contact information and progress tracking</li>
+          <li>Attendance tracking with clock-in/clock-out functionality</li>
+          <li>Assessment grading with performance analytics</li>
+          <li>Certification management with expiration alerts</li>
+          <li>Hour tracking for program completion requirements</li>
+          <li>Document management with secure storage</li>
+        </ul>
+        <img src="imgs/barber-student-management.png" alt="Barber School Students">
+      </div>
+
+      <div class="feature">
+        <h3>Lead Management System</h3>
+        <p>
+          Created a robust lead tracking system to help increase enrollment. The system includes:
+        </p>
+        <ul>
+          <li>Lead capture and qualification</li>
+          <li>Follow-up task scheduling</li>
+          <li>Conversion tracking from lead to enrolled student</li>
+          <li>Communication history logging</li>
+        </ul>
+        <img src="imgs/barber-lead.png" alt="Barber School Leads">
+      </div>
+
+      <div class="feature">
+        <h3>Communication Tools</h3>
+        <p>
+          Developed a comprehensive communication suite for staying connected with students and leads:
+        </p>
+        <ul>
+          <li>Customizable email templates with variable support</li>
+          <li>Bulk email capabilities for announcements</li>
+          <li>Communication history tracking</li>
+          <li>Automated notifications for certifications and important dates</li>
+        </ul>
+        <img src="imgs/barber-communications.png" alt="Barber School Communication">
+      </div>
+
+      <div class="feature">
+        <h3>Administrative Functions</h3>
+        <p>
+          Built powerful admin tools for school management:
+        </p>
+        <ul>
+          <li>User management with role-based permissions</li>
+          <li>Reporting tools with customizable parameters</li>
+          <li>Analytics dashboards for business insights</li>
+          <li>System settings and configuration options</li>
+        </ul>
+        <img src="imgs/barber-reports.png" alt="Barber School Admin">
+      </div>
+
+      <!-- Development Process -->
+      <h2>Development Process</h2>
+      <p>
+        The project was developed using an iterative approach with regular client feedback:
+      </p>
+      <ol>
+        <li><strong>Requirements Gathering:</strong> Conducted detailed interviews with school staff to understand their workflow and pain points</li>
+        <li><strong>System Architecture:</strong> Designed a scalable database schema and component structure</li>
+        <li><strong>Component Library:</strong> Developed reusable UI components documented with Storybook</li>
+        <li><strong>Feature Implementation:</strong> Built out functionality in phases, starting with core student management</li>
+        <li><strong>Testing & Refinement:</strong> Conducted user testing and refined interfaces based on feedback</li>
+        <li><strong>Deployment:</strong> Set up hosting environment with proper security measures</li>
+      </ol>
+
+      <!-- Technical Challenges -->
+      <h2>Technical Challenges & Solutions</h2>
+      
+      <div class="challenge">
+        <h3>Complex Data Relationships</h3>
+        <p>
+          <strong>Challenge:</strong> Managing the intricate relationships between students, assessments, attendance records, and certifications.
+        </p>
+        <p>
+          <strong>Solution:</strong> Implemented a well-structured database schema with foreign key relationships and type-safe database interactions using TypeScript interfaces that mirror the Supabase schema.
+        </p>
+      </div>
+
+      <!-- Results & Impact -->
+      <h2>Results & Business Impact</h2>
+      <p>
+        The completed solution has not been used by the client yet I'm really excited for them to use it and to see how it impacts their business:
+      </p>
+      <!-- <ul>
+        <li>Reduced administrative workload by an estimated 30% through automation</li>
+        <li>Improved lead conversion rates with better follow-up tracking</li>
+        <li>Enhanced student satisfaction through better communication and progress tracking</li>
+        <li>Eliminated paper records with secure digital document storage</li>
+        <li>Provided valuable business insights through analytics dashboards</li>
+      </ul> -->
+
+      <!-- Conclusion & Learnings -->
+      <h2>Conclusion & Key Learnings</h2>
+      <p>
+        This project demonstrated my ability to design and implement a complete full-stack application that solves real business problems. Throughout the development process, I gained valuable experience in:
+      </p>
+      <ul>
+        <li>Building scalable Vue applications with the Composition API</li>
+        <li>Designing efficient database schemas for complex domain models</li>
+        <li>Creating intuitive UIs for diverse user roles with varying technical expertise</li>
+        <li>Deploying and maintaining a production web application</li>
+      </ul>
+
+      <!-- Video Demos -->
+      <h2>Video Demonstrations</h2>
+      <p>
+        Watch walkthroughs of key system features:
+      </p>
+      <div class="video-demos">
+        <a href="https://www.loom.com/share/7b10dad7b9ea458987d9c3e54805b2d4?sid=cad25c0f-9cf2-48e3-9b05-f7027ce553e4" class="btn">Student Management Demo</a>
+        <a href="https://www.loom.com/share/1363e3978df64e339801f95ad887137b?sid=c66b85cb-6dad-43dd-8b48-2bd6ba7efe1f" class="btn">Dashboard & Analytics Demo</a>
+        <a href="https://www.loom.com/share/65b745dff3494685b65dfef643043d73?sid=5a805866-58e3-4c7a-b11f-010f1f3a1a54" class="btn">Lead Management Demo</a>
+      </div>
+
+      <a href="https://github.com/sethkline/barber-school-management" class="btn">Link to Github Repo</a>
+
+      <a href="index.html" class="btn back-btn">Back to Projects</a>
     </div>
   </section>
 
